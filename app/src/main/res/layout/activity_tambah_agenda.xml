@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="nekadgeek.agendaramadhan.TambahAgenda">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutJudul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Judul Agenda  " />
+
+        <EditText
+            android:id="@+id/edit_text_judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Judul" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDeskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayoutJudul"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Agenda " />
+
+        <EditText
+            android:id="@+id/edit_text_desk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayoutDeskripsi"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Agenda " />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit_text_tanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Tanggal" />
+
+            <ImageButton
+                android:id="@+id/img_btn_tanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_alarm_add_black_24dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/linearLayoutTanggal"
+        android:layout_alignRight="@+id/linearLayoutTanggal"
+        android:layout_below="@+id/linearLayoutTanggal"
+        android:text="Simpan Agenda" />
+
+</RelativeLayout>
